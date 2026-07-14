@@ -3,9 +3,7 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
-
-from .serializers import LoginSerializer, RegisterSerializer
-from .utils import (
+from accounts.utils import (
     blacklist_refresh_token,
     delete_auth_cookies,
     get_refresh_token_from_cookie,
@@ -13,7 +11,7 @@ from .utils import (
     set_access_cookie,
     set_auth_cookies,
 )
-
+from .serializers import LoginSerializer, RegisterSerializer
 
 class RegisterView(APIView):
     """Creates a new user account."""
