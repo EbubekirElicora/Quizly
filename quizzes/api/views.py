@@ -2,15 +2,13 @@ from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
-
-from .selectors import get_owned_quiz, get_user_quizzes
+from quizzes.selectors import get_owned_quiz, get_user_quizzes
+from quizzes.services import create_quiz_from_youtube_url
 from .serializers import (
     QuizCreateSerializer,
     QuizSerializer,
     QuizUpdateSerializer,
 )
-from .services import create_quiz_from_youtube_url
-
 
 class QuizListCreateView(APIView):
     """Lists user quizzes or creates a new quiz."""

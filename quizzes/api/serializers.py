@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
-from .models import Question, Quiz
-from .utils import normalize_youtube_url
+from quizzes.models import Question, Quiz
+from quizzes.utils import normalize_youtube_url
 
 
 class QuestionSerializer(serializers.ModelSerializer):
