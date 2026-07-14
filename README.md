@@ -8,6 +8,34 @@ The frontend was provided as part of the project assignment. The Django REST bac
 
 ---
 
+## Table of Contents
+
+- [Live Demo](#live-demo)
+- [Features](#features)
+- [Architecture](#architecture)
+- [Repository Structure](#repository-structure)
+- [Tech Stack](#tech-stack)
+- [Local Setup](#local-setup)
+  - [Requirements](#requirements)
+  - [Environment Variables](#environment-variables)
+  - [Backend Setup](#backend-setup)
+  - [Frontend Setup](#frontend-setup)
+- [CORS Configuration](#cors-configuration)
+- [Authentication](#authentication)
+- [API Endpoints](#api-endpoints)
+- [Example Requests](#example-requests)
+- [Quiz Generation Flow](#quiz-generation-flow)
+- [YouTube Processing](#youtube-processing)
+- [Permissions and Ownership](#permissions-and-ownership)
+- [Admin Panel](#admin-panel)
+- [Postman Testing](#postman-testing)
+- [Production Deployment](#production-deployment)
+- [Security Notes](#security-notes)
+- [Local Development Workflow](#local-development-workflow)
+- [Notes for Reviewers](#notes-for-reviewers)
+
+---
+
 ## Live Demo
 
 - **Application:** https://quizly.ebubekir-elicora.de/
@@ -180,6 +208,12 @@ The provided frontend is maintained separately and is not included in this backe
 
 ---
 
+## Local Setup
+
+The following sections explain how to configure and run Quizly locally.
+
+---
+
 ## Requirements
 
 Before running the project locally, make sure the following tools are installed:
@@ -207,7 +241,7 @@ C:\ffmpeg\bin
 
 ---
 
-## Environment Variables
+### Environment Variables
 
 Create a `.env` file in the backend project root:
 
@@ -241,7 +275,7 @@ The production `.env` file must never be committed to GitHub.
 
 ---
 
-## Backend Setup
+### Backend Setup
 
 Clone the repository:
 
@@ -285,7 +319,7 @@ Install the dependencies:
 pip install -r requirements.txt
 ```
 
-Create the `.env` file and add the required environment variables.
+Create the [`.env` file](#environment-variables) and add the required environment variables listed in the Environment Variables section.
 
 Run the migrations:
 
@@ -319,7 +353,7 @@ http://127.0.0.1:8000/admin/
 
 ---
 
-## Frontend Setup
+### Frontend Setup
 
 > The frontend was provided separately and is not included in this backend repository.
 
