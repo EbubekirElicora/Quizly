@@ -1,5 +1,5 @@
 from django.conf import settings
-from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework_simplejwt.tokens import RefreshToken, TokenError
 
 
 def get_cookie_settings():
@@ -53,10 +53,13 @@ def get_refresh_token_from_cookie(request):
 
 
 def blacklist_refresh_token(refresh_token):
-    """Blacklists a refresh token if token blacklist is enabled."""
+    """Blacklists a refresh token unless it is already invalid."""
 
-    token = RefreshToken(refresh_token)
-    token.blacklist()
+    try:
+        token = RefreshToken(refresh_token)
+        token.blacklist()
+    except TokenError:
+        pass
 
 
 def get_user_data(user):
