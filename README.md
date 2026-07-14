@@ -212,8 +212,6 @@ The provided frontend is maintained separately and is not included in this backe
 
 The following sections explain how to configure and run Quizly locally.
 
----
-
 ## Requirements
 
 Before running the project locally, make sure the following tools are installed:
