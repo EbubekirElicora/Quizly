@@ -251,7 +251,7 @@ def transcribe_audio(audio_path):
         ValueError: If transcription succeeds but contains no spoken text.
     """
     try:
-        result = get_whisper_model().transcribe(audio_path)
+        result = get_whisper_model().transcribe(audio_path, fp16=False)
     except Exception as error:
         raise RuntimeError("Audio transcription failed.") from error
 
