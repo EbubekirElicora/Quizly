@@ -134,27 +134,36 @@ This GitHub repository contains the custom Django backend.
 ```text
 Quizly/
 ├── accounts/
+│   ├── api/
+│   │   ├── __init__.py
+│   │   ├── serializers.py
+│   │   ├── urls.py
+│   │   └── views.py
+│   ├── migrations/
 │   ├── authentication.py
-│   ├── serializers.py
-│   ├── urls.py
-│   ├── utils.py
-│   └── views.py
+│   ├── apps.py
+│   └── utils.py
 │
 ├── core/
+│   ├── __init__.py
+│   ├── asgi.py
 │   ├── settings.py
 │   ├── urls.py
-│   ├── asgi.py
 │   └── wsgi.py
 │
 ├── quizzes/
+│   ├── api/
+│   │   ├── __init__.py
+│   │   ├── serializers.py
+│   │   ├── urls.py
+│   │   └── views.py
+│   ├── migrations/
 │   ├── admin.py
+│   ├── apps.py
 │   ├── models.py
 │   ├── selectors.py
-│   ├── serializers.py
 │   ├── services.py
-│   ├── urls.py
-│   ├── utils.py
-│   └── views.py
+│   └── utils.py
 │
 ├── manage.py
 ├── requirements.txt
