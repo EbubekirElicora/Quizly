@@ -140,7 +140,7 @@ Quizly/
 │   ├── utils.py
 │   └── views.py
 │
-├── config/
+├── core/
 │   ├── settings.py
 │   ├── urls.py
 │   ├── asgi.py
