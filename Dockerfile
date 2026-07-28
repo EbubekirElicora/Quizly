@@ -22,12 +22,15 @@ RUN python -m pip install --upgrade pip \
 
 COPY . .
 
-RUN mkdir -p \
-    /app/data \
-    /app/staticfiles \
-    /app/tmp \
-    /root/.cache/whisper
+RUN chmod +x /app/docker-entrypoint.sh \
+    && mkdir -p \
+        /app/data \
+        /app/staticfiles \
+        /app/tmp \
+        /root/.cache/whisper
 
 EXPOSE 8000
+
+ENTRYPOINT ["/app/docker-entrypoint.sh"]
 
 CMD ["gunicorn", "core.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "1", "--timeout", "900"]
