@@ -1,0 +1,28 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: quizly_backend_test
+
+    env_file:
+      - .env
+
+    environment:
+      SQLITE_PATH: /app/data/db.sqlite3
+      PYTHONUNBUFFERED: "1"
+
+    ports:
+      - "127.0.0.1:8010:8000"
+
+    volumes:
+      - ./docker-data:/app/data
+      - ./staticfiles:/app/staticfiles
+      - ./tmp:/app/tmp
+      - whisper_cache:/root/.cache/whisper
+
+    restart: unless-stopped
+
+volumes:
+  whisper_cache:
