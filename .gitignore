@@ -16,6 +16,7 @@ __pycache__/
 # Local database
 db.sqlite3
 db.sqlite3-journal
+docker-data/
 
 # Django-generated directories
 media/
