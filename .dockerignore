@@ -1,0 +1,47 @@
+# Git
+.git
+.gitignore
+
+# Python environments
+env
+venv
+.venv
+
+# Python cache files
+__pycache__
+*.py[cod]
+*$py.class
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Local database
+db.sqlite3
+db.sqlite3-journal
+
+# Generated files
+staticfiles
+media
+logs
+tmp
+temp
+
+# Test and coverage files
+.pytest_cache
+.coverage
+htmlcov
+
+# Development tools
+.vscode
+.idea
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Server-only files
+requirements-server.txt
+requirements.txt.bak
+frontend
+frontend-upload
