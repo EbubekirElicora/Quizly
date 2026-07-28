@@ -1,5 +1,8 @@
 FROM python:3.12-slim
 
+# Deno is required by yt-dlp for YouTube JavaScript challenges.
+COPY --from=denoland/deno:bin-2.9.4 /deno /usr/local/bin/deno
+
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 ENV PIP_NO_CACHE_DIR=1
